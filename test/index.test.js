@@ -18,6 +18,17 @@ describe('cal', () => {
     assert.equal(arrs.slice(-1), total);
   });
 
+  it('shoud cal data less than threads ok', () => {
+    let cal = new Calculate(path.join(__dirname, 'support', 'worker.js'), 16);
+    let arrs = [];
+    let total = 3;
+    for (let i = 0; i < total; i++) {
+      arrs.push(i);
+    }
+    arrs = cal.proxy(arrs, 'plus');
+    assert.equal(arrs.slice(-1), total);
+  });
+
   it('shoud cal even number data ok', () => {
     let cal = new Calculate(path.join(__dirname, 'support', 'worker.js'),
       2);
