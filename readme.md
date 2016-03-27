@@ -7,9 +7,22 @@
 # Usage
 ```js
 const Calculator = require('parallel-calculate');
-const calculator = new Calculator('path to cal.js');
+const calculator = new Calculator(path.join(__dirname, './test/support/worker.js'));
 let result = calculator.proxy([1,2,3], 'plus');
 ```
+
+# APIs
+
+parallel-calculate
+
+### constructor(path, limits);
+ - path: @param {String} path to the worker file,must be absolute path.
+ - limits: @param {Number} optinal. Concurrency number.
+
+### proxy(datas, method)
+- datas: @param {Array} datas to cal.must Array.
+- method: @param {String} method want to invoke.
+- @returns {Array} Returns the result processed by the method.
 
 # test
 
