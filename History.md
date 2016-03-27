@@ -1,3 +1,8 @@
+1.0.3 / 2016-03-27
+==================
+
+  * fix:fix when number of data less than threads error
+
 1.0.2 / 2016-03-27
 ==================
 

@@ -1,6 +1,6 @@
 {
   "name": "parallel-calculate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Yeah! That's right. MutiThread JS for fast calculation.",
   "main": "index.js",
   "scripts": {
